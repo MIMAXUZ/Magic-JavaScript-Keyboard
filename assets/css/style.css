@@ -1,0 +1,100 @@
+/*
+Magic Keyboard 1.0
+*/
+body {
+	background-image: linear-gradient(to right, #00203FFF, #00253FFF);
+	color: #fff;
+	font-family: Arial;
+}
+
+.fa.fa-level-up {
+	transform: rotate(-1000deg);
+}
+
+
+nav {
+	font-size: 40px;
+}
+
+[id=comment_box] {
+	margin-top: 10px;
+}
+textarea:focus {
+	color: #fff;
+}
+[id=comment] {
+	background-image: linear-gradient(to right, #00303FFF, #00503FFF);
+	color: #fff;
+}
+
+label[for=comment] {
+	font-size: 15px;
+	text-transform: uppercase;
+}
+
+.myKeyboard {
+	width: -moz-fit-content;
+	width: -webkit-fit-content;
+	width: fit-content;
+	margin: auto;
+}
+
+.myKeyboard .alphabet_keys #theKeyboard,
+.myKeyboard .numeric_symbols_keys #theKeyboard {
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.myKeyboard .alphabet_keys .first_key_board_row>div,
+.myKeyboard .alphabet_keys .second_key_board_row>div,
+.myKeyboard .alphabet_keys .third_key_board_row>div,
+.myKeyboard .alphabet_keys .fourth_key_board_row>div {
+	width: 70px;
+	border: 1px solid #5C5C5C !important;
+	margin: 10px;
+	text-align: center;
+	line-height: 70px;
+	font-size: 30px;
+}
+
+#cAp_btn,
+#enTer_btn {
+	width: 115px;
+}
+
+#nuMber_symbOl {
+	width: 205px;
+}
+
+#Space_bTn {
+	width: 475px;
+}
+
+
+.myKeyboard .numeric_symbols_keys .first_key_board_row>div,
+.myKeyboard .numeric_symbols_keys .second_key_board_row>div,
+.myKeyboard .numeric_symbols_keys .third_key_board_row>div,
+.myKeyboard .numeric_symbols_keys .fourth_key_board_row>div,
+.myKeyboard .numeric_symbols_keys .fifth_key_board_row>div {
+	width: 70px;
+	border: 1px solid #5C5C5C !important;
+	margin: 10px;
+	text-align: center;
+	line-height: 70px;
+	font-size: 30px;
+}
+
+#FourthAlphabet {
+	width: 160px;
+}
+
+.numeric_symbols_keys {
+	display: none;
+}
+
+
+#my_Cap_LocK {
+	color: transparent;
+	-webkit-text-stroke-width: 1px;
+	-webkit-text-stroke-color: #fff;
+}

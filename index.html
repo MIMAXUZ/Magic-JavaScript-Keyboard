@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>MAGIC Keyboard JavaScript</title>
+
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+		<link rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" href="assets/css/style.css" />
+
+	</head>
+	<body>
+		<div class="container">
+			<form>
+				<div class="form-group" id="comment_box">
+					<textarea class="form-control" rows="5" id="comment" placeholder="Type something here..." autofocus></textarea>
+				</div>
+			</form>
+			<div class="myKeyboard">
+				<div class="alphabet_keys" id="alphabet_keys">
+					<div class="first_key_board_row" id="theKeyboard">
+						<div id="letter_Q" onclick="MGKeyboard()">q</div>
+						<div id="letter_W" onclick="W_makeIt()">w</div>
+						<div id="letter_E" onclick="E_makeIt()">e</div>
+						<div id="letter_R" onclick="R_makeIt()">r</div>
+						<div id="letter_T" onclick="T_makeIt()">t</div>
+						<div id="letter_Y" onclick="Y_makeIt()">y</div>
+						<div id="letter_U" onclick="U_makeIt()">u</div>
+						<div id="letter_I" onclick="I_makeIt()">i</div>
+						<div id="letter_O" onclick="O_makeIt()">o</div>
+						<div id="letter_P" onclick="P_makeIt()">p</div>
+					</div>
+
+					<div class="second_key_board_row" id="theKeyboard">
+						<div id="letter_A" onclick="A_makeIt()">a</div>
+						<div id="letter_S" onclick="S_makeIt()">s</div>
+						<div id="letter_D" onclick="D_makeIt()">d</div>
+						<div id="letter_F" onclick="F_makeIt()">f</div>
+						<div id="letter_G" onclick="G_makeIt()">g</div>
+						<div id="letter_H" onclick="H_makeIt()">h</div>
+						<div id="letter_J" onclick="J_makeIt()">j</div>
+						<div id="letter_K" onclick="K_makeIt()">k</div>
+						<div id="letter_L" onclick="L_makeIt()">l</div>
+						<div class="deLete_btn" id="deLete_btn" onclick="deLete_btn_makeIt()"><i
+								class="fa fa-arrow-circle-left" aria-hidden="true"></i></div>
+					</div>
+
+
+					<div class="third_key_board_row" id="theKeyboard">
+						<div class="cAp_btn false" id="cAp_btn" onclick="cAp_btn_makeIt()"><i
+								class="fa fa-long-arrow-up" id="my_Cap_LocK" aria-hidden="true"></i></div>
+						<div id="letter_Z" onclick="Z_makeIt()">z</div>
+						<div id="letter_X" onclick="X_makeIt()">x</div>
+						<div id="letter_C" onclick="C_makeIt()">c</div>
+						<div id="letter_V" onclick="V_makeIt()">v</div>
+						<div id="letter_B" onclick="B_makeIt()">b</div>
+						<div id="letter_N" onclick="N_makeIt()">n</div>
+						<div id="letter_M" onclick="M_makeIt()">m</div>
+						<div class="enTer_btn" id="enTer_btn" onclick="enTer_btn_makeIt()"><i class="fa fa-level-up"
+								aria-hidden="true"></i></div>
+					</div>
+
+					<div class="fourth_key_board_row" id="theKeyboard">
+						<div class="nuMber_symbOl" id="nuMber_symbOl" onclick="nuMber_symbOl_makeIt()">?123</div>
+						<div class="smiLey_symbOl" id="smiLey_symbOl" onclick="smiLey_symbOl_makeIt()"><i
+								class="fa fa-smile-o" aria-hidden="true"></i></div>
+						<div class="Space_bTn" id="Space_bTn" onclick="Space_bTn_makeIt()">Space</div>
+						<div class="fullStop_bTn" id="fullStop_bTn" onclick="fullStop_bTn_makeIt()">.</div>
+					</div>
+				</div>
+				<div class="numeric_symbols_keys" id="numeric_symbols_keys">
+					<div class="first_key_board_row" id="theKeyboard">
+						<div onclick="number1()">1</div>
+						<div onclick="number2()">2</div>
+						<div onclick="number3()">3</div>
+						<div onclick="number4()">4</div>
+						<div onclick="number5()">5</div>
+						<div onclick="number6()">6</div>
+						<div onclick="number7()">7</div>
+						<div onclick="number8()">8</div>
+						<div onclick="number9()">9</div>
+						<div onclick="number0()">0</div>
+					</div>
+
+					<div class="second_key_board_row" id="theKeyboard">
+						<div onclick="FirstSymbol1()">~</div>
+						<div onclick="FirstSymbol2()">`</div>
+						<div onclick="FirstSymbol3()">!</div>
+						<div onclick="FirstSymbol4()">@</div>
+						<div onclick="FirstSymbol5()">#</div>
+						<div onclick="FirstSymbol6()">£</div>
+						<div onclick="FirstSymbol7()">€</div>
+						<div onclick="FirstSymbol8()">$</div>
+						<div onclick="FirstSymbol9()">¢</div>
+						<div onclick="FirstSymbol10()">¥</div>
+					</div>
+
+					<div class="third_key_board_row" id="theKeyboard">
+						<div onclick="SecondSymbol1()">§</div>
+						<div onclick="SecondSymbol2()">%</div>
+						<div onclick="SecondSymbol3()">°</div>
+						<div onclick="SecondSymbol4()">^</div>
+						<div onclick="SecondSymbol5()">&</div>
+						<div onclick="SecondSymbol6()">*</div>
+						<div onclick="SecondSymbol7()">(</div>
+						<div onclick="SecondSymbol8()">)</div>
+						<div onclick="SecondSymbol9()">-</div>
+						<div onclick="SecondSymbol10()">_</div>
+					</div>
+
+					<div class="fourth_key_board_row" id="theKeyboard">
+						<div onclick="ThirdSymbol1()">+</div>
+						<div onclick="ThirdSymbol2()">=</div>
+						<div onclick="ThirdSymbol3()">{</div>
+						<div onclick="ThirdSymbol4()">}</div>
+						<div onclick="ThirdSymbol5()">[</div>
+						<div onclick="ThirdSymbol6()">]</div>
+						<div onclick="ThirdSymbol7()">|</div>
+						<div onclick="ThirdSymbol8()">\</div>
+						<div onclick="ThirdSymbol9()">/</div>
+						<div onclick="ThirdSymbol10()">:</div>
+					</div>
+
+					<div class="fifth_key_board_row" id="theKeyboard">
+						<div id="FourthAlphabet" onclick="FourthAlphabet_makeIt()">abc</div>
+						<div onclick="FourthSymbol1()">;</div>
+						<div onclick="FourthSymbol2()">"</div>
+						<div onclick="FourthSymbol3()">'</div>
+						<div onclick="FourthSymbol4()">
+							<</div> <div onclick="FourthSymbol5()">>
+						</div>
+						<div onclick="FourthSymbol6()">,</div>
+						<div onclick="FourthSymbol7()">.</div>
+						<div onclick="FourthSymbol8()">?</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="assets/js/script.js" defer></script>
+	</body>
+<html>
